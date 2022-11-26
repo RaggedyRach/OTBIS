@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4664C84A-45E6-4B88-B288-B124F99BC4FE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StagingAreaConsoleAppV3</RootNamespace>
+    <AssemblyName>StagingAreaConsoleAppV3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArenaDataObjects\ArenaEventAudit.cs" />
+    <Compile Include="ArenaDataObjects\ArenaEventSummaryPriceLevel.cs" />
+    <Compile Include="ArenaDataObjects\ArenaEventCapacity.cs" />
+    <Compile Include="ArenaDataObjects\CompType.cs" />
+    <Compile Include="ArenaDataObjects\Inquiry.cs" />
+    <Compile Include="ArenaDataObjects\PriceLevelDetail.cs" />
+    <Compile Include="ArenaDataObjects\PriceLevelStat.cs" />
+    <Compile Include="ArenaDataObjects\PriceLevelUnsold.cs" />
+    <Compile Include="ArenaDataObjects\Price.cs" />
+    <Compile Include="ArenaDataObjects\SalesChannelDetail.cs" />
+    <Compile Include="ArenaDataObjects\Settlement.cs" />
+    <Compile Include="ArenaDataObjects\SummarySalesChannel.cs" />
+    <Compile Include="ArenaDataObjects\SummaryTicketType.cs" />
+    <Compile Include="ArenaDataObjects\TicketTypeUnsold.cs" />
+    <Compile Include="CarParkDataObjects\CarPark.cs" />
+    <Compile Include="Migrations\202210091351225_carpark.cs" />
+    <Compile Include="Migrations\202210091351225_carpark.designer.cs">
+      <DependentUpon>202210091351225_carpark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210102151124_test.cs" />
+    <Compile Include="Migrations\202210102151124_test.designer.cs">
+      <DependentUpon>202210102151124_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210252244404_buildingtables.cs" />
+    <Compile Include="Migrations\202210252244404_buildingtables.designer.cs">
+      <DependentUpon>202210252244404_buildingtables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210291254297_update_model.cs" />
+    <Compile Include="Migrations\202210291254297_update_model.designer.cs">
+      <DependentUpon>202210291254297_update_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210291257461_update_model1.cs" />
+    <Compile Include="Migrations\202210291257461_update_model1.designer.cs">
+      <DependentUpon>202210291257461_update_model1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210291306034_update_model2.cs" />
+    <Compile Include="Migrations\202210291306034_update_model2.designer.cs">
+      <DependentUpon>202210291306034_update_model2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210291355185_update_model3.cs" />
+    <Compile Include="Migrations\202210291355185_update_model3.designer.cs">
+      <DependentUpon>202210291355185_update_model3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210291405038_update_model4.cs" />
+    <Compile Include="Migrations\202210291405038_update_model4.designer.cs">
+      <DependentUpon>202210291405038_update_model4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210301316473_updatetables1.cs" />
+    <Compile Include="Migrations\202210301316473_updatetables1.designer.cs">
+      <DependentUpon>202210301316473_updatetables1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210301331590_updatetables2.cs" />
+    <Compile Include="Migrations\202210301331590_updatetables2.designer.cs">
+      <DependentUpon>202210301331590_updatetables2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210301345285_updatetables3.cs" />
+    <Compile Include="Migrations\202210301345285_updatetables3.designer.cs">
+      <DependentUpon>202210301345285_updatetables3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210301417264_updatetables4.cs" />
+    <Compile Include="Migrations\202210301417264_updatetables4.designer.cs">
+      <DependentUpon>202210301417264_updatetables4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210302238351_updateTable4.cs" />
+    <Compile Include="Migrations\202210302238351_updateTable4.designer.cs">
+      <DependentUpon>202210302238351_updateTable4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211022057227_updateTable5.cs" />
+    <Compile Include="Migrations\202211022057227_updateTable5.designer.cs">
+      <DependentUpon>202211022057227_updateTable5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211022107053_updateTable6.cs" />
+    <Compile Include="Migrations\202211022107053_updateTable6.designer.cs">
+      <DependentUpon>202211022107053_updateTable6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211022121543_updateTable7.cs" />
+    <Compile Include="Migrations\202211022121543_updateTable7.designer.cs">
+      <DependentUpon>202211022121543_updateTable7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211022141032_updateTable8.cs" />
+    <Compile Include="Migrations\202211022141032_updateTable8.designer.cs">
+      <DependentUpon>202211022141032_updateTable8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211092017280_editTables2..cs" />
+    <Compile Include="Migrations\202211092017280_editTables2..designer.cs">
+      <DependentUpon>202211092017280_editTables2..cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211121237513_newtable1.cs" />
+    <Compile Include="Migrations\202211121237513_newtable1.designer.cs">
+      <DependentUpon>202211121237513_newtable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211121241272_newtable2.cs" />
+    <Compile Include="Migrations\202211121241272_newtable2.designer.cs">
+      <DependentUpon>202211121241272_newtable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211121636409_newtable3.cs" />
+    <Compile Include="Migrations\202211121636409_newtable3.designer.cs">
+      <DependentUpon>202211121636409_newtable3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PaymentMethod.cs" />
+    <Compile Include="Production\Category.cs" />
+    <Compile Include="Production\SubCategory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StagingContext.cs" />
+    <Compile Include="W5DataObjects\W5Booking.cs" />
+    <Compile Include="W5DataObjects\W5Membership.cs" />
+    <Compile Include="W5DataObjects\W5SalesSummary.cs" />
+    <Compile Include="W5DataObjects\W5Sale.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210091351225_carpark.resx">
+      <DependentUpon>202210091351225_carpark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210102151124_test.resx">
+      <DependentUpon>202210102151124_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210252244404_buildingtables.resx">
+      <DependentUpon>202210252244404_buildingtables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210291254297_update_model.resx">
+      <DependentUpon>202210291254297_update_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210291257461_update_model1.resx">
+      <DependentUpon>202210291257461_update_model1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210291306034_update_model2.resx">
+      <DependentUpon>202210291306034_update_model2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210291355185_update_model3.resx">
+      <DependentUpon>202210291355185_update_model3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210291405038_update_model4.resx">
+      <DependentUpon>202210291405038_update_model4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210301316473_updatetables1.resx">
+      <DependentUpon>202210301316473_updatetables1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210301331590_updatetables2.resx">
+      <DependentUpon>202210301331590_updatetables2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210301345285_updatetables3.resx">
+      <DependentUpon>202210301345285_updatetables3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210301417264_updatetables4.resx">
+      <DependentUpon>202210301417264_updatetables4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210302238351_updateTable4.resx">
+      <DependentUpon>202210302238351_updateTable4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211022057227_updateTable5.resx">
+      <DependentUpon>202211022057227_updateTable5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211022107053_updateTable6.resx">
+      <DependentUpon>202211022107053_updateTable6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211022121543_updateTable7.resx">
+      <DependentUpon>202211022121543_updateTable7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211022141032_updateTable8.resx">
+      <DependentUpon>202211022141032_updateTable8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211092017280_editTables2..resx">
+      <DependentUpon>202211092017280_editTables2..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211121237513_newtable1.resx">
+      <DependentUpon>202211121237513_newtable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211121241272_newtable2.resx">
+      <DependentUpon>202211121241272_newtable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211121636409_newtable3.resx">
+      <DependentUpon>202211121636409_newtable3.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
